@@ -18,8 +18,6 @@ class Product {
                     if(((<string><unknown>this[key]).length <= 0)) throw new Error(`${key} is empty`);
                     break;
                 case 'number':
-                    // Ambos son soluciones para ele error del .length (ts no está seguro si es un string, por lo tanto marca error)
-                    // if(((this[key] + '').length <= 0)) throw new Error(`${key} is empty`);
                     if(((<number><unknown>this[key]) <= 0)) throw new Error(`${key} is zero`);
                     break;
             
